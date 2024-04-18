@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cambiar el color de fondo de toda la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 800px; /* Ancho máximo del contenido */
+    padding: 20px;
+    background-color: #fff; /* Color de fondo del contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  #configuracion {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .memory-game {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Distribuir en 6 columnas */
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Color de fondo del juego */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .card {
+    width: 80px;
+    height: 120px;
+    background-color: #007bff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: transparent; /* Oculta el texto por defecto */
+    transition: transform 0.5s ease; /* Animación de transformación */
+    transform-style: preserve-3d; /* Para mantener la perspectiva en la transformación */
+    perspective: 1000px; /* Profundidad de perspectiva para el efecto de 3D */
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg); /* Voltear la carta hacia atrás */
+  }
+  
+  .card .front-face,
+  .card .back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ocultar el contenido en la cara trasera */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .back-face {
+    transform: rotateY(180deg); /* Voltear la cara trasera hacia adelante */
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Color de fondo */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  
