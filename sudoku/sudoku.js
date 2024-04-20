@@ -178,20 +178,6 @@ function reiniciarJuego() {
 document.getElementById("cambiarTablero").addEventListener("click", cambiarTablero);
 
 
-window.onload = function() {
-    iniciarJuego();
-};
-
-
-window.onload = function() {
-    iniciarJuego();
-
-    // Obtener el botón de resolver
-    const resolverButton = document.getElementById("resolver");
-    resolverButton.addEventListener("click", resolverSudoku);
-};
-
-
 
 function iniciarJuego() {
     // Limpiar el contenedor de botones antes de crear nuevos
